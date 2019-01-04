@@ -1,27 +1,64 @@
+body{
+    font-family: 'Prosto One', cursive;
+}
+
+.title{
+    font-weight: bold;
+}
+
+#banner{
+    width: 100%;
+    height: 55%;
+    margin-bottom: 10px;
+}
+
+#main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #ffff1a;
+    font-family: 'Bungee Inline', cursive;
+    text-align: center;
+}
+#tag{
+    font-size: 32px;
+    font-family: 'Prosto One', cursive;
+    text-align: center;
+}
+
 img{
     width: 200px;
     height: 200px;
     float: left;
     width: 25%
 }
+
 .event{
     padding: 5px;
     float: right;
     width: 73%;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .row{
     padding: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid darkgray;
 }
+
+.row:hover{
+  background-color: #9068be;
+  color: white;
+}
+
 .block1{
     margin: 5px;
 }
 
 .block2{
     padding: 5px;
-    border-left: 1px solid black;
+    border-left: 1px solid darkgray;
 }
 
 .fas{
@@ -39,4 +76,23 @@ img{
 .count{
     text-align: center;
     font-size: 35px;
+}
+
+footer{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 30px;
+
+}
+
+#logo{
+    width: 111px;
+    height: 111px;
+}
+
+#credits{
+    font-size: 25px;
 }

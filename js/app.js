@@ -21,7 +21,7 @@ function changeContent(){
 var imgElem = document.getElementsByTagName('img');
 
 function changeImg(){
-    imgElem[2].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73';
+    imgElem[3].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73';
 }
 
 var upArrow = document.getElementsByClassName('fas fa-thumbs-up');
