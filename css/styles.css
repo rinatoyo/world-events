@@ -1,0 +1,42 @@
+img{
+    width: 200px;
+    height: 200px;
+    float: left;
+    width: 25%
+}
+.event{
+    padding: 5px;
+    float: right;
+    width: 73%;
+    font-size: 20px;
+}
+
+.row{
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+.block1{
+    margin: 5px;
+}
+
+.block2{
+    padding: 5px;
+    border-left: 1px solid black;
+}
+
+.fas{
+    margin: 10px;
+    padding: 5px;
+}
+.vote{
+    float: right; 
+}
+.up, .down{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.count{
+    text-align: center;
+    font-size: 35px;
+}
