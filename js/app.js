@@ -85,6 +85,18 @@ function removeLetter(){
         rebirth.innerHTML = joinUp;
 }
 
+// 8. the Gutenberg Printing Press
+// Add an event listener to the h3 element of 'showBooks' that will trigger a function to display a random book title from the classics array in the div element of 'mustRead'.
+
+var classics = ["Charlotte's Web", "War and Peace", "The Secret", "How to Win Friends and Influence People", "Good to Great", "The Lean Startup", "The Odyssey", "Essentialism"];
+
+showBooks.addEventListener('click', showTitles);
+
+function showTitles(){
+  var randomize = Math.floor(Math.random()* classics.length);
+  mustRead.innerHTML = classics[randomize];
+}
+
 
 
 var upArrow = document.getElementsByClassName('fas fa-thumbs-up');
