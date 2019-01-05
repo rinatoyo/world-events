@@ -65,6 +65,26 @@ function removeCorn(){
 
 // }
 
+// 7. The Renaissance
+// Add an event listener to the div element of 'rebirth' that will trigger a function to remove all the lowercase and uppercase z's in the content. 
+rebirth.addEventListener('click', removeLetter);
+
+function removeLetter(){
+    var zLetters = [];
+    var otherLetters = [];
+    var words = rebirth.innerText;
+    var splitLetters = words.split('');
+    for(var i = 0; i<splitLetters.length; i++){
+       if(splitLetters[i] === 'z' || splitLetters[i] === 'Z'){
+           zLetters.push(splitLetters[i]) 
+       }else{
+           otherLetters.push(splitLetters[i])
+       }
+    }
+        var joinUp = otherLetters.join('');
+        rebirth.innerHTML = joinUp;
+}
+
 
 
 var upArrow = document.getElementsByClassName('fas fa-thumbs-up');
