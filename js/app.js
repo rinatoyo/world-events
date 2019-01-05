@@ -24,6 +24,49 @@ function changeImg(){
     imgElem[3].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73';
 }
 
+
+// 4. The Great Depression
+// Add an event listener to the the h3 element with the id of 'hardTimes' that will trigger a function to display the contents in the div element of 'depress' after clicking on The Great Depression.
+
+hardTimes.addEventListener('click', showDepress);
+
+function showDepress(){
+    depress.style.display = 'block';
+}
+
+// 5. Apollo 11
+// Add an event listener to the h3 element with the id of 'blastOff' that will trigger a function to show and hide the contents in the div element of 'moonWalk' after clicking on Apollo 11.
+
+blastOff.addEventListener('click', orbit);
+
+function orbit(){
+  if(moonWalk.style.display === 'block'){
+      moonWalk.style.display = 'none';
+  }else{
+      moonWalk.style.display = 'block';
+  }
+}
+
+// 6. The American Civil War
+// Add an event listener to the div element of 'freedom' that will trigger a function to remove all instances of 'corn' in the content.
+
+//Option 1
+freedom.addEventListener('click', removeCorn)
+
+function removeCorn(){
+   freedom.innerHTML = freedom.innerHTML.replace('corn', ' ');
+}
+
+//Option 2 REGEX
+// freedom.addEventListener('click', removeCorn)
+
+// function removeCorn(){
+//    freedom.innerHTML = freedom.innerHTML.replace(/corn/g, ' ');
+
+// }
+
+
+
 var upArrow = document.getElementsByClassName('fas fa-thumbs-up');
 for(var i = 0; i<upArrow.length; i++){
     upArrow[i].addEventListener('click', countUp)
