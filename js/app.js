@@ -1,5 +1,7 @@
+//Make history, or better yet, the World Events page interactive with events or event listeners for each exercise below.
+
 // 1. The Greatest Thing Since Sliced Bread 
-// Find the onclick event in this section and create a function that will italicize the contents and change the font color to cornflowerblue in the div id of 'bread'.
+// Find the onclick event in the h3 element and create a function that will italicize the contents and change the font color to cornflowerblue in the div id of 'bread'.
 
 function italics(){
    bread.style.fontStyle = 'italic';
@@ -7,7 +9,7 @@ function italics(){
 }
 
 // 2. The Birth of the Internet
-// Find the onclick event in this section and create a function that will replace the current contents in the div id of 'webby' to the following:
+// Find the onmouseover event in the h3 element and create a function that will replace the current contents in the div id of 'webby' to the following:
 
 var webContents = 'The Internet got its start in the United States more than 50 years ago as a government weapon in the Cold War. In the 1980s, research at CERN in Switzerland by British computer scientist Tim Berners-Lee resulted in the World Wide Web, linking hypertext documents into an information system, accessible from any node on the network.';
 
@@ -15,15 +17,14 @@ function changeContent(){
     webby.innerHTML = webContents;
 }
 
-// 3. World War II
-//. Find the onmouseover event in this section and create a function that will change the current img to the following: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73
+// 3. The Boxer Rebellion
+// Find the onclick event in div element with the id of 'fightDaPower' and create a function that will convert the Chinese text in the same div element into English (the English content is provided below).
 
-var imgElem = document.getElementsByTagName('img');
+var revolution = 'Boxer Uprising or Yihetuan Movement was an anti-imperialist uprising which took place in China towards the end of the Qing dynasty between 1899 and 1901. It was initiated by the Militia United in Righteousness, known in English as the "Boxers," and was motivated by proto-nationalist sentiments and opposition to foreign imperialism and associated Christian missionary activity.';
 
-function changeImg(){
-    imgElem[3].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73';
+function translation(){
+    fightDaPower.innerHTML = revolution;
 }
-
 
 // 4. The Great Depression
 // Add an event listener to the the h3 element with the id of 'hardTimes' that will trigger a function to display the contents in the div element of 'depress' after clicking on The Great Depression.
@@ -62,11 +63,11 @@ function removeCorn(){
 
 // function removeCorn(){
 //    freedom.innerHTML = freedom.innerHTML.replace(/corn/g, ' ');
-
 // }
 
 // 7. The Renaissance
 // Add an event listener to the div element of 'rebirth' that will trigger a function to remove all the lowercase and uppercase z's in the content. 
+
 rebirth.addEventListener('click', removeLetter);
 
 function removeLetter(){
@@ -97,12 +98,33 @@ function showTitles(){
   mustRead.innerHTML = classics[randomize];
 }
 
+// 9. World War II
+// Add an event listener to the image element that will trigger a function that will toggle between images when hovering (mouseover) on the image.
 
+// use the following image reference:
+// https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73
+
+var victory = document.getElementsByTagName('img');
+
+for(var i = 0; i<victory.length; i++){
+    victory[i].addEventListener('mouseover', togglePic);
+}
+
+function togglePic(){
+   if(victory[9].src === 'https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg' ){
+       victory[9].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73'
+   }else{
+       victory[9].src = 'https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg' 
+   }
+}
 
 var upArrow = document.getElementsByClassName('fas fa-thumbs-up');
 for(var i = 0; i<upArrow.length; i++){
     upArrow[i].addEventListener('click', countUp)
 }
+
+
+
 
 function countUp(){
    var upCount = this.querySelectorAll('.up')[0];
