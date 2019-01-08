@@ -1,4 +1,4 @@
-//Make history, or better yet, the World Events page interactive with events or event listeners for each exercise below.
+//Make history, or better yet...make the World Events page interactive with events or event listeners for each exercise below.
 
 // 1. The Greatest Thing Since Sliced Bread 
 // Find the onclick event in the h3 element and create a function that will italicize the contents and change the font color to cornflowerblue in the div id of 'bread'.
@@ -27,7 +27,7 @@ function translation(){
 }
 
 // 4. The Great Depression
-// Add an event listener to the the h3 element with the id of 'hardTimes' that will trigger a function to display the contents in the div element of 'depress' after clicking on The Great Depression.
+// Add an event listener to the the h3 element with the id of 'hardTimes' and create a function to display the contents in the div element of 'depress' after clicking on The Great Depression.
 
 hardTimes.addEventListener('click', showDepress);
 
@@ -36,7 +36,7 @@ function showDepress(){
 }
 
 // 5. Apollo 11
-// Add an event listener to the h3 element with the id of 'blastOff' that will trigger a function to show and hide the contents in the div element of 'moonWalk' after clicking on Apollo 11.
+// Add an event listener to the h3 element with the id of 'blastOff' and create a function to show and hide the contents in the div element of 'moonWalk' after clicking on Apollo 11.
 
 blastOff.addEventListener('click', orbit);
 
@@ -49,7 +49,7 @@ function orbit(){
 }
 
 // 6. The American Civil War
-// Add an event listener to the div element of 'freedom' that will trigger a function to remove all instances of 'corn' in the content.
+// Add an event listener to the div element of 'freedom' and create a function to remove all instances of 'corn' in the content.
 
 //Option 1
 freedom.addEventListener('click', removeCorn)
@@ -66,7 +66,7 @@ function removeCorn(){
 // }
 
 // 7. The Renaissance
-// Add an event listener to the div element of 'rebirth' that will trigger a function to remove all the lowercase and uppercase z's in the content. 
+// Add an event listener to the div element of 'rebirth' and create a function to remove all the lowercase and uppercase z's in the content. 
 
 rebirth.addEventListener('click', removeLetter);
 
@@ -87,7 +87,7 @@ function removeLetter(){
 }
 
 // 8. the Gutenberg Printing Press
-// Add an event listener to the h3 element of 'showBooks' that will trigger a function to display a random book title from the classics array in the div element of 'mustRead'.
+// Add an event listener to the h3 element of 'showBooks' and create a function to display a random book title from the classics array in the div element of 'mustRead'.
 
 var classics = ["Charlotte's Web", "War and Peace", "The Secret", "How to Win Friends and Influence People", "Good to Great", "The Lean Startup", "The Odyssey", "Essentialism"];
 
@@ -99,7 +99,7 @@ function showTitles(){
 }
 
 // 9. World War II
-// Add an event listener to the image element that will trigger a function that will toggle between images when hovering (mouseover) on the image.
+// Add an event listener to the image element and create a function that will toggle between images when hovering (mouseover) on the image.
 
 // use the following image reference:
 // https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73
@@ -118,13 +118,33 @@ function togglePic(){
    }
 }
 
-var upArrow = document.getElementsByClassName('fas fa-thumbs-up');
-for(var i = 0; i<upArrow.length; i++){
-    upArrow[i].addEventListener('click', countUp)
+// 10. The Industrial Revolution
+// Add an event listener to the h3 element and create a function that will reverse the contents in the gameChanger div element.
+
+var h3Elem = document.getElementsByClassName('title');
+console.log(h3Elem);
+
+h3Elem[9].addEventListener('click', backwards);
+
+function backwards(){
+    var revoContents = gameChanger.innerText;
+    console.log(revoContents)
+    var revoSplit = revoContents.split(' ')
+    console.log(revoSplit)
+    var reverseRevo = revoSplit.reverse();
+    console.log(reverseRevo);
+    var joinUp = reverseRevo.join(' ');
+    console.log(joinUp)
+    gameChanger.innerText = joinUp;
+    
 }
 
 
 
+var upArrow = document.getElementsByClassName('fas fa-thumbs-up');
+for(var i = 0; i<upArrow.length; i++){
+    upArrow[i].addEventListener('click', countUp)
+}
 
 function countUp(){
    var upCount = this.querySelectorAll('.up')[0];
